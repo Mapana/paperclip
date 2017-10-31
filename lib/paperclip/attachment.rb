@@ -90,6 +90,10 @@ module Paperclip
 
       initialize_storage
     end
+    
+    def set_options(options={}){
+      @options = @options.deep_merge(options)
+    }
 
     # What gets called when you call instance.attachment = File. It clears
     # errors, assigns attributes, and processes the file. It also queues up the
